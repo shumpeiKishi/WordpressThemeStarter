@@ -4,14 +4,13 @@
 	<meta <?php bloginfo('charset'); ?>>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title><?php bloginfo('title'); ?></title>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" >
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" >
 	<?php wp_head(); ?>
 	<?php wp_enqueue_script('jquery'); ?>
-	<?php wp_enqueue_script('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' ); ?>
-
+	<?php wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js' ); ?>
 </head>
 <body>
 	<nav class="navbar navbar-default">
